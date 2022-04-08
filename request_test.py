@@ -5,7 +5,7 @@ def get(url_get, param):
     req = requests.get(url=url_get, params=param)
     content = req.text
     return content
-# dksfhkhdfkldshfkdlfncncnncn
+
 
 def port(url_port, param):
     req = requests.post(url=url_port, json=param)
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     #           }
     params = {
         "primes": [50, 90, 30, 10],
-        }
+    }
 
     req_get = get(url, params)
     print(req_get)

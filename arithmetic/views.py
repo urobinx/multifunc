@@ -6,7 +6,6 @@ from etc.assginpdc import producer_primes
 
 from alg.figureup import two_sum, three_sum, count_primes
 from alg.verify import verify_url
-__import__()
 
 
 class FigureUp(APIView):
@@ -92,7 +91,7 @@ class CountPrimes(APIView):
                 for i in range(1, 3):
                     loop = loop_int[(i - 1) * 3: i * 3]
                     producer_primes(loop)
-                loop_int = loop_int[3 * len(loop_int) // 3: ]
+                loop_int = loop_int[3 * len(loop_int) // 3:]
             for i in loop_int:
                 _count_ls.update({i: count_primes(i)})
         except Exception as e:
